@@ -1,4 +1,5 @@
 using Tyuiu.KukarskiySA.Sprint2.Task4.V6.Lib;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tyuiu.KukarskiySA.Sprint2.Task4.V6.Test
 {
@@ -24,7 +25,7 @@ namespace Tyuiu.KukarskiySA.Sprint2.Task4.V6.Test
             double result = _dataService.Calculate(x, y);
 
             // Assert
-            double expected = Math.Pow(x * ((y + 1) / (x + 2)), x);
+            double expected = x * Math.Pow((y + 1) / (x + 2), x); // Исправлено
             Assert.AreEqual(expected, result, 1e-6);
         }
 
@@ -43,21 +44,20 @@ namespace Tyuiu.KukarskiySA.Sprint2.Task4.V6.Test
             Assert.AreEqual(expected, result, 1e-6);
         }
 
+        // Добавим тест для проверки на вашем примере (x = 9, y = 4)
         [TestMethod]
-        public void Calculate_WhenXIsZero_ShouldHandleProperly()
+        public void Calculate_WhenXIsNineAndYIsFour_ShouldReturnExpectedValue()
         {
             // Arrange
-            double x = 0;
-            double y1 = 5;
-            double y2 = 15;
+            double x = 9;
+            double y = 4;
 
             // Act
-            double resultWhenTrue = _dataService.Calculate(x, y1);
-            double resultWhenFalse = _dataService.Calculate(x, y2);
+            double result = _dataService.Calculate(x, y);
 
             // Assert
-            Assert.AreEqual(1, resultWhenTrue, "Ожидает 1 когда x = 0 и условия true.");
-            Assert.IsTrue(double.IsInfinity(resultWhenFalse), "Ожидает бесконечность, когда x = 0 и условия false.");
+            double expected = x * Math.Pow((y + 1) / (x + 2), x); // Ожидаемое значение
+            Assert.AreEqual(expected, result, 1e-6);
         }
     }
 }

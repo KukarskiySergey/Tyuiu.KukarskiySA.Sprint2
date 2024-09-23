@@ -1,4 +1,5 @@
-﻿using Tyuiu.KukarskiySA.Sprint2.Task4.V6.Lib;
+﻿using System;
+using Tyuiu.KukarskiySA.Sprint2.Task4.V6.Lib;
 
 DataService dataService = new DataService();
 
@@ -29,6 +30,6 @@ double z = dataService.Calculate(x, y);
 
 Console.WriteLine("************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                           *");
-Console.WriteLine($"Результат z: {z}");
+Console.WriteLine($"Результат z: {Math.Round(z,3)}");
 Console.WriteLine("************************************************************************");
 
