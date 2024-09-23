@@ -30,6 +30,6 @@ double z = dataService.Calculate(x, y);
 
 Console.WriteLine("************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                           *");
-Console.WriteLine($"Результат z: {Math.Round(z,3)}");
+Console.WriteLine($"Результат z: {z}");
 Console.WriteLine("************************************************************************");
 

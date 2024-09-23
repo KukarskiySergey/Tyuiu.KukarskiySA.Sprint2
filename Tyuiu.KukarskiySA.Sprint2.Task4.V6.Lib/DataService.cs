@@ -6,8 +6,9 @@ public class DataService : ISprint2Task4V6
 {
     public double Calculate(double x, double y)
     {
-        return (x + 20 > y * 2)
+        double result = (x + 20 > y * 2)
             ? x * Math.Pow((y + 1) / (x + 2), x)
             : Math.Pow(y, 2) + 2 * x + (6 / x);
+        return Math.Round(result,3);
     }
 }
