@@ -25,10 +25,9 @@ double x = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите значение y: ");
 double y = Convert.ToDouble(Console.ReadLine());
 
-double result = dataService.Calculate(x, y);
+double z = dataService.Calculate(x, y);
 
 Console.WriteLine("************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                           *");
-Console.WriteLine($"Результат вычисления z: {Math.Round(result, 3)}");
+Console.WriteLine($"Результат z: {z}");
 Console.WriteLine("************************************************************************");
-
