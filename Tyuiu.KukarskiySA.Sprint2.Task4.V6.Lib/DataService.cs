@@ -17,7 +17,7 @@ namespace Tyuiu.KukarskiySA.Sprint2.Task4.V6.Lib
                 result = Math.Pow(y, 2) + 2 * x + (6 / x);
             }
 
-            return Math.Round(result, 3);
+            return Math.Round(result, 3); // Округление до 3 знаков после запятой
         }
     }
 }
